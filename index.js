@@ -1,9 +1,12 @@
+
+
+// Juego de PIEDRA, PAPEL ó TIJERAS
 alert("Piedra, papel ó Tijera!")
 alert("Comienza el juego!")
 
 let player = prompt("Elegi un ataque: 0 para elegir PIEDRA, 1 para PAPEL y 2 para TIJERAS")
 
-
+// Ataque del jugador
 if (parseInt(player) == 0) {
     alert("Elegiste PIEDRA")
 } else if (parseInt(player) == 1) {
@@ -12,7 +15,7 @@ if (parseInt(player) == 0) {
     alert("Elegiste TIJERAS")
 }
 
-
+//Ataque del enemigo
 let enemy = Math.round(Math.random() * 2)
 
 if (parseInt(enemy) == 0) {
@@ -23,7 +26,7 @@ if (parseInt(enemy) == 0) {
     alert("El enemigo eligió TIJERAS")
 }
 
-
+//Resultado de la batalla
 if (player == enemy) {
     alert("Empate")
 } else if (player == 0 && enemy == 2) {
@@ -35,3 +38,12 @@ if (player == enemy) {
 } else {
     alert ("Perdiste :(")
 }
+
+// JUEGO DE MEMOTEST
+
+const memoCat = [
+    { nameCat: "Chicho", imgCat: "https://ibb.co/VMYvHbg"},
+    { nameCat: "Gaudio", imgCat: "https://ibb.co/qgVPQsC"},
+    { nameCat: "Nino", imgCat: "https://ibb.co/B6xPRqF"},
+    { nameCat: "Tucu", imgCat: "https://ibb.co/rMYBh87"}
+]
