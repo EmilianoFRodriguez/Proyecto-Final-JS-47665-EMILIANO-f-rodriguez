@@ -1,7 +1,7 @@
 
 
 // Juego de PIEDRA, PAPEL ó TIJERAS
-/*
+
 alert("Piedra, papel ó Tijera!")
 alert("Comienza el juego!")
 
@@ -39,34 +39,33 @@ if (player == enemy) {
 } else {
     alert ("Perdiste :(")
 }
-*/
+
+
+
+
+
 // JUEGO DE MEMORAMA
 
-const memoCat = [
-    {id: "0", card: "a", nameCat: "Chicho", imgCat: "https://ibb.co/VMYvHbg"},
-    {id: "1", card: "b", nameCat: "Chicho", imgCat: "https://ibb.co/VMYvHbg"},
-    {id: "2", card: "a", nameCat: "Gaudio", imgCat: "https://ibb.co/qgVPQsC"},
-    {id: "3", card: "b", nameCat: "Gaudio", imgCat: "https://ibb.co/qgVPQsC"},
-    {id: "4", card: "a", nameCat: "Nino", imgCat: "https://ibb.co/B6xPRqF"},
-    {id: "5", card: "b", nameCat: "Nino", imgCat: "https://ibb.co/B6xPRqF"},
-    {id: "6", card: "a", nameCat: "Tucu", imgCat: "https://ibb.co/rMYBh87"},
-    {id: "7", card: "b", nameCat: "Tucu", imgCat: "https://ibb.co/rMYBh87"},
-]
+//ARREGLO DE URL DE IMAGENES
 
+const memoCat = ["https://ibb.co/VMYvHbg", "https://ibb.co/VMYvHbg", "https://ibb.co/qgVPQsC", "https://ibb.co/qgVPQsC", "https://ibb.co/B6xPRqF", "https://ibb.co/B6xPRqF", "https://ibb.co/rMYBh87", "https://ibb.co/rMYBh87"]
 
-function randomCard(){
-    memoCat.forEach(random => {
-        const cards = memoCat.length
-        const fRandom = Math.round(Math.random() * cards)
-        
-        random.style.order = cards[fRandom]
-    });
-    
-} 
+//FUNCION PARA MEZCLAR EL ARREGLO
 
+const shuffleMemoCat = (arrayMemoCat) => {
+    for (let cards = arrayMemoCat.length - 1; cards > 0; cards--) {
+        const random = Math.floor(Math.random() * (cards + 1));
+        const mezclar = arrayMemoCat[cards];
+        arrayMemoCat[cards] = arrayMemoCat[random];
+        arrayMemoCat[random] = mezclar;
+    }
+    return arrayMemoCat
+}
 
+//PRUEBA
 
-// let mezclar = Math.round(Math.random() * memoCat.length);
-// const shuffledCat = memoCat.sort((a, b) => a - b); 
+console.log(`Orden inicial ${memoCat}`);
 
-console.log(shuffledCat);
+shuffleMemoCat(memoCat)
+
+console.log(`Mezclados ${memoCat}`);
