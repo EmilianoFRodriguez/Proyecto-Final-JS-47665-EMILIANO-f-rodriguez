@@ -1,0 +1,9 @@
+@keyframes jump {
+    0%{
+        bottom: 75px;
+    }    
+
+    45%, 55%{
+        bottom: 150px;
+    }
+}

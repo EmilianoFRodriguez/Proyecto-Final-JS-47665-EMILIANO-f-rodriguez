@@ -32,7 +32,22 @@ main section .player {
   position: absolute;
 }
 
+.jump {
+  animation: jump 1s linear infinite;
+}
+
 footer {
   height: 10%;
   background-color: palevioletred;
 }
+
+@keyframes jump {
+  0% {
+    bottom: 75px;
+  }
+  45%, 55% {
+    bottom: 150px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
