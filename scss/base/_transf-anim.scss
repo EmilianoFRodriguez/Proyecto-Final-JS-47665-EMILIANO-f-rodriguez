@@ -1,9 +1,18 @@
 @keyframes jump {
     0%{
-        bottom: 75px;
+        bottom: 85px;
     }    
 
-    45%, 55%{
+    35%, 45%{
         bottom: 150px;
+    }
+}
+
+@keyframes escenario {
+    0%{
+        right: 0%;
+    }
+    100%{
+        right: 100%;
     }
 }

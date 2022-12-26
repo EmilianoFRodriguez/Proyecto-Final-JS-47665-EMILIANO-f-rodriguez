@@ -1,6 +1,10 @@
-const player = document.getElementsByClassName("player")
+const player = document.getElementById("player")
 
 
-document.addEventListener("click", function(){
-    player.classlist.add("jump");
+document.addEventListener("click", () => {
+    player.classList.add("jump");
+}); 
+
+player.addEventListener('animationend', () => {
+    player.classList.remove("jump");
 }); 

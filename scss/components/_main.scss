@@ -2,22 +2,31 @@ main{
 
     section {
         width: 80%;
-        height: 70%;
         margin: auto;
         position: relative;
+        background: linear-gradient(#43cffd, lightblue);
         .escenario{
-            height: 100%;
+            border: solid 1px violet;
+            height: 500px;
+            width: 200%;
+            background: url(../../escenarios/level1-ok.png) repeat-x;
+            position: relative;
+            animation: escenario 5s linear infinite;    
+            // img {
+            //     height: 500px;
+            //     bottom: 0px;
+            // }
         }
-        .player {
+        #player {
             height: 75px;
             width: 40px;
             background-color: green;
-            bottom: 75px;
-            left: 100px;
+            bottom: 85px;
+            left: 50px;
             position: absolute;
         }
     }
 }
 .jump{
-    animation: jump 1s linear infinite;
+    animation: jump 1s linear;
 }
