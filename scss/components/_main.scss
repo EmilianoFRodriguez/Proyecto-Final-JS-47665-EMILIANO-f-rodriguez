@@ -4,8 +4,17 @@ main{
         width: 80%;
         height: 70%;
         margin: auto;
-        img{
+        position: relative;
+        .escenario{
             height: 100%;
+        }
+        .player {
+            height: 75px;
+            width: 40px;
+            background-color: green;
+            bottom: 75px;
+            left: 100px;
+            position: absolute;
         }
     }
 }

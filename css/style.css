@@ -18,9 +18,18 @@ main section {
   width: 80%;
   height: 70%;
   margin: auto;
+  position: relative;
 }
-main section img {
+main section .escenario {
   height: 100%;
+}
+main section .player {
+  height: 75px;
+  width: 40px;
+  background-color: green;
+  bottom: 75px;
+  left: 100px;
+  position: absolute;
 }
 
 footer {
