@@ -1,32 +1,40 @@
 main{
 
     section {
-        width: 80%;
+        width: 1000px;
         margin: auto;
         position: relative;
         background: linear-gradient(#43cffd, lightblue);
+        overflow: hidden;
         .escenario{
             border: solid 1px violet;
-            height: 500px;
+            height: 450px;
             width: 200%;
-            background: url(../../escenarios/level1-ok.png) repeat-x;
+            background: url(../../escenarios/level-1-ok.png) repeat-x;
             position: relative;
             animation: escenario 5s linear infinite;    
-            // img {
-            //     height: 500px;
-            //     bottom: 0px;
-            // }
         }
         #player {
             height: 75px;
             width: 40px;
             background-color: green;
-            bottom: 85px;
+            bottom: 45px;
             left: 50px;
             position: absolute;
+        }
+        .obstaculo1 {
+            height: 60px;
+            width: 35px;
+            position: absolute;
+            bottom: 45px;
+            right: 100px;
+            animation: obstaculo1 5s linear infinite;
+            img {
+                max-height: 100%;
+            }
         }
     }
 }
 .jump{
-    animation: jump 1s linear;
+    animation: jump .75s linear;
 }

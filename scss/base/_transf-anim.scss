@@ -1,10 +1,10 @@
 @keyframes jump {
     0%{
-        bottom: 85px;
+        bottom: 45px;
     }    
 
-    35%, 45%{
-        bottom: 150px;
+    40%, 55%{
+        bottom: 145px;
     }
 }
 
@@ -15,4 +15,14 @@
     100%{
         right: 100%;
     }
+}
+
+@keyframes obstaculo1 {
+    0%{
+        right: -10%;
+    }
+    100%{
+        right: 110%;
+    }
+    
 }
