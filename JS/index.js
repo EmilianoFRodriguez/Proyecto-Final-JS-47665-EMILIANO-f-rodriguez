@@ -5,25 +5,50 @@
 alert("Piedra, papel ó Tijera!")
 alert("Comienza el juego!")
 
-let player = prompt("Elegi un ataque: 0 para elegir PIEDRA, 1 para PAPEL y 2 para TIJERAS")
+const playerAttack = [
+    { id: 1, attack: "Piedra", img: `https://ibb.co/P526sFm` },
+    { id: 2, attack: "Papel", img: `https://ibb.co/D7MnRN6` },
+    { id: 3, attack: "Tijera", img: `https://ibb.co/0nJ8Qch` }
+]
+
+const enemyAttack = [
+    { id: 1, attack: "Piedra", img: `https://ibb.co/k39FpVK` },
+    { id: 2, attack: "Papel", img: `https://ibb.co/375S63P` },
+    { id: 3, attack: "Tijera", img: `https://ibb.co/cb0TpjL` }
+]
+
+playerAttack.forEach(imgAttack => {
+    console.log(imgAttack.img);
+    document.getElementsByClassName('attackDivs').innerHTML = `
+    <div>
+        <img class="attack" src="" alt="ataques">
+    </div>`
+    }
+
+)
+
+
+
+
+let player = parseInt(prompt("Elegi un ataque: 0 para elegir PIEDRA, 1 para PAPEL y 2 para TIJERAS"))
 
 // Ataque del jugador
-if (parseInt(player) == 0) {
+if ((player) == 0) {
     alert("Elegiste PIEDRA")
-} else if (parseInt(player) == 1) {
+} else if ((player) == 1) {
     alert("Elegiste PAPEL")
-} else if (parseInt(player) == 2) {
+} else if ((player) == 2) {
     alert("Elegiste TIJERAS")
 }
 
 //Ataque del enemigo
 let enemy = Math.round(Math.random() * 2)
 
-if (parseInt(enemy) == 0) {
+if ((enemy) == 0) {
     alert("El enemigo eligió PIEDRA")
-} else if (parseInt(enemy) == 1) {
+} else if ((enemy) == 1) {
     alert("El enemigo eligió PAPEL")
-} else if (parseInt(enemy) == 2) {
+} else if ((enemy) == 2) {
     alert("El enemigo eligió TIJERAS")
 }
 
@@ -31,13 +56,13 @@ if (parseInt(enemy) == 0) {
 if (player == enemy) {
     alert("Empate")
 } else if (player == 0 && enemy == 2) {
-    alert ("GANASTEE")
+    alert("GANASTEE")
 } else if (player == 1 && enemy == 0) {
-    alert ("GANASTEE")
+    alert("GANASTEE")
 } else if (player == 2 && enemy == 1) {
-    alert ("GANASTEE")
+    alert("GANASTEE")
 } else {
-    alert ("Perdiste :(")
+    alert("Perdiste :(")
 }
 
 

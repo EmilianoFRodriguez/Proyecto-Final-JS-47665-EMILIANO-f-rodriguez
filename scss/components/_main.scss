@@ -1,7 +1,14 @@
 main{
 
+    .sectionMemoCat {
+        background: url(../../escenarios/memo-cat.png);
+        .enemyMemo {
+            background: url(../../gatitos/chicho-memo.png);
+        }
+    }
     section {
         width: 1000px;
+        height: 450px;
         margin: auto;
         position: relative;
         background: linear-gradient(#43cffd, lightblue);
@@ -36,5 +43,5 @@ main{
     }
 }
 .jump{
-    animation: jump .75s linear;
+    animation: jump 1s linear;
 }
