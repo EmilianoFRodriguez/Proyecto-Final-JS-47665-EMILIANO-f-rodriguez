@@ -17,15 +17,20 @@ const enemyAttack = [
     { id: 3, attack: "Tijera", img: `https://ibb.co/cb0TpjL` }
 ]
 
-playerAttack.forEach(imgAttack => {
+/*
+playerAttack.forEach((imgAttack) => {
     console.log(imgAttack.img);
-    document.getElementsByClassName('attackDivs').innerHTML = `
+    /* document.getElementsByClassName('attackDivs').innerHTML = `
     <div>
         <img class="attack" src="" alt="ataques">
     </div>`
     }
+) */
 
-)
+for (const imgAttack of playerAttack) {
+    console.log(imgAttack.img);
+    
+}
 
 
 
