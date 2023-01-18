@@ -1,7 +1,6 @@
-const escenario = document.getElementById("escenario");
-const player = document.getElementById("player");
-const obstaculo1 = document.getElementById("obstaculo1");
+// Funcion de salto para el player
 
+const player = document.getElementById("player");
 
 document.addEventListener('keydown', function (tecla) {
     console.log(tecla.key);
