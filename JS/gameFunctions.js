@@ -45,14 +45,18 @@ function playGame() {
     scorePlay();
 }
 
-buttonPlayStop.addEventListener('click', () => {
+document.addEventListener('keydown', function (tecla) {
+    let teclaP = tecla.key.toLowerCase();
+    if (teclaP == 'p') {
+        keyPlayStop();
+    }
+})
+
+function keyPlayStop() {
     if (buttonPlayStop.classList.contains("play")) {
         playGame();
     } else {
-        pauseGame();
+        pauseGame();  
     }
     buttonPlayStop.classList.toggle("play");
-});
-
-
-
+};

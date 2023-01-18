@@ -82,6 +82,11 @@ main section .obstaculo1 img {
   animation: jump 1s linear;
 }
 
+.turbo {
+  animation: escenario 4s linear 3;
+  animation: obstaculo1 4s linear 3;
+}
+
 footer {
   height: 100px;
   background-color: palevioletred;
