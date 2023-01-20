@@ -1,36 +1,99 @@
-
-
 // Juego de PIEDRA, PAPEL ó TIJERAS
 
-alert("Piedra, papel ó Tijera!")
-alert("Comienza el juego!")
 
+//---------------------------------------------------------------------------//
+
+//array de objetos con los ataques de player y enemy
 const playerAttack = [
-    { id: 1, attack: "Piedra", img: `https://ibb.co/P526sFm` },
-    { id: 2, attack: "Papel", img: `https://ibb.co/D7MnRN6` },
-    { id: 3, attack: "Tijera", img: `https://ibb.co/0nJ8Qch` }
+    { id: 1, attack: "Piedra", img: `https://i.ibb.co/55QRXGM/player-piedra.png` },
+    { id: 2, attack: "Papel", img: `https://i.ibb.co/p3KpLgs/player-papel.png` },
+    { id: 3, attack: "Tijera", img: `https://i.ibb.co/GdPBF0c/player-tijera.png` }
 ]
 
 const enemyAttack = [
-    { id: 1, attack: "Piedra", img: `https://ibb.co/k39FpVK` },
-    { id: 2, attack: "Papel", img: `https://ibb.co/375S63P` },
-    { id: 3, attack: "Tijera", img: `https://ibb.co/cb0TpjL` }
+    { id: 1, attack: "Piedra", img: `https://i.ibb.co/Xy3T9fX/chicho-piedra.png` },
+    { id: 2, attack: "Papel", img: `https://i.ibb.co/Vt0Mn1k/chicho-papel.png` },
+    { id: 3, attack: "Tijera", img: `https://i.ibb.co/gvNgXxV/chicho-tijera.png` }
 ]
 
-/*
-playerAttack.forEach((imgAttack) => {
-    console.log(imgAttack.img);
-    /* document.getElementsByClassName('attackDivs').innerHTML = `
-    <div>
-        <img class="attack" src="" alt="ataques">
-    </div>`
-    }
-) */
+//variables y constantes para el render de img
+const playerPiedra = playerAttack.find(piedra => piedra.attack == "Piedra");
+const playerPapel = playerAttack.find(papel => papel.attack == "Papel");
+const playerTijera = playerAttack.find(tijera => tijera.attack == "Tijera")
 
-for (const imgAttack of playerAttack) {
-    console.log(imgAttack.img);
-    
+let playerAttackPiedra = document.getElementById("piedra");
+let playerAttackPapel = document.getElementById("papel");
+let playerAttackTijera = document.getElementById("tijera");
+
+// render img de ataques
+
+
+playerAttackPiedra.innerHTML = `<img src="${playerPiedra.img}" alt="ataque-piedra">`;
+playerAttackPapel.innerHTML = `<img src="${playerPapel.img}" alt="ataque-papel">`;
+playerAttackTijera.innerHTML = `<img src="${playerTijera.img}" alt="ataque-tijera">`;
+
+
+//--------------------------------------------------------------------//
+
+//sellecion de ataques
+
+const selectionPiedra = document.getElementById("piedra");
+const selectionPapel = document.getElementById("papel");
+const selectionTijera = document.getElementById("tijera");
+const playerPPT = document.getElementById("playerPPT");
+
+selectionPiedra.addEventListener('click', () => {
+    playerPPT.classList.toggle("piedraOK")
+})
+selectionPapel.addEventListener('click', () => {
+    playerPPT.classList.toggle("papelOK")
+})
+selectionTijera.addEventListener('click', () => {
+    playerPPT.classList.toggle("tijeraOK")
+})
+
+
+
+function renderAttack() {
+    /*switch (clasePlayer) {
+        case playerPPT.classList.contains("piedraOK"):
+            playerPPT.innerHTML = `<img src="${playerPiedra.img}" alt="ataque-piedra">`;
+            break;
+        case playerPPT.classList.contains("papelOK"):
+            playerPPT.innerHTML = `<img src="${playerPapel.img}" alt="ataque-papel">`;
+            break;
+        case playerPPT.classList.contains("tijeraOK"):
+            playerPPT.innerHTML = `<img src="${playerTijera.img}" alt="ataque-tijera">`;
+            break;
+    }*/
+
+    if (claseplayer == playerPPT.classList.contains("piedraOK")) {
+        return playerPPT.innerHTML = `<img src="${playerPiedra.img}" alt="ataque-piedra">`;
+    } else if (claseplayer == playerPPT.classList.contains("papelOK")) {
+        return playerPPT.innerHTML = `<img src="${playerPapel.img}" alt="ataque-papel">`;
+    } else if (claseplayer == playerPPT.classList.contains("tijeraOK")) {
+        return playerPPT.innerHTML = `<img src="${playerTijera.img}" alt="ataque-tijera">`;
+    }
 }
+
+/* function renderPiedraOK() {
+    playerPPT.innerHTML = `<img src="${playerPiedra.img}" alt="ataque-piedra">`;
+
+}
+
+function renderPapelOK() {
+    playerPPT.innerHTML = `<img src="${playerPapel.img}" alt="ataque-papel">`;
+
+}
+
+function renderTijeraOK() {
+    playerPPT.innerHTML = `<img src="${playerTijera.img}" alt="ataque-tijera">`;
+
+}
+ */
+renderAttack();
+
+
 
 
 

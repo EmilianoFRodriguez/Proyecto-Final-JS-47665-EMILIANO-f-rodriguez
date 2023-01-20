@@ -1,16 +1,54 @@
 main{
 
-    .sectionMemoCat {
+    .sectionL1 {
+        position: relative;
+    }
+    .sectionPPT {
         background: url(../../escenarios/memo-cat.png);
-        .enemyMemo {
-            background: url(../../gatitos/chicho-memo.png);
+        .contEnemyPPT{
+            width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            .enemyPPT {
+                width: 200px;
+                height: 200px;
+                margin-top: 50px;
+                background: url(../../gatitos/chicho-memo.png) center center;
+                background-size: cover;
+            }
+        }
+        .contPlayerPPT{
+            width: 100%;
+            height: 100px;
+            .playerPPT{
+                width: 100px;
+                height: 100px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .attackPPT {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            .attack {
+                width: 100px;
+                height: 100px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
         }
     }
     section {
         width: 1000px;
         height: 450px;
         margin: auto;
-        position: relative;
         background: linear-gradient(#43cffd, lightblue);
         overflow: hidden;
         .escenario{
@@ -28,14 +66,16 @@ main{
             bottom: 45px;
             left: 50px;
             position: absolute;
+            border: solid 1px red;
         }
         .obstaculo1 {
             height: 60px;
-            width: 35px;
+            width: 45px;
             position: absolute;
             bottom: 45px;
-            right: 100px;
-            animation: obstaculo1 5s linear infinite;
+            left: 1000px;
+            // animation: obstaculo1 4.2s linear infinite;
+            border: solid 1px red;
             img {
                 max-height: 100%;
             }

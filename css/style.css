@@ -36,17 +36,55 @@ header {
   border-color: transparent transparent transparent #320629;
 }
 
-main .sectionMemoCat {
+main .sectionL1 {
+  position: relative;
+}
+main .sectionPPT {
   background: url(../../escenarios/memo-cat.png);
 }
-main .sectionMemoCat .enemyMemo {
-  background: url(../../gatitos/chicho-memo.png);
+main .sectionPPT .contEnemyPPT {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+main .sectionPPT .contEnemyPPT .enemyPPT {
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+  background: url(../../gatitos/chicho-memo.png) center center;
+  background-size: cover;
+}
+main .sectionPPT .contPlayerPPT {
+  width: 100%;
+  height: 100px;
+}
+main .sectionPPT .contPlayerPPT .playerPPT {
+  width: 100px;
+  height: 100px;
+}
+main .sectionPPT .contPlayerPPT .playerPPT img {
+  width: 100%;
+  height: 100%;
+}
+main .sectionPPT .attackPPT {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+main .sectionPPT .attackPPT .attack {
+  width: 100px;
+  height: 100px;
+}
+main .sectionPPT .attackPPT .attack img {
+  width: 100%;
+  height: 100%;
 }
 main section {
   width: 1000px;
   height: 450px;
   margin: auto;
-  position: relative;
   background: linear-gradient(#43cffd, lightblue);
   overflow: hidden;
 }
@@ -65,14 +103,15 @@ main section #player {
   bottom: 45px;
   left: 50px;
   position: absolute;
+  border: solid 1px red;
 }
 main section .obstaculo1 {
   height: 60px;
-  width: 35px;
+  width: 45px;
   position: absolute;
   bottom: 45px;
-  right: 100px;
-  animation: obstaculo1 5s linear infinite;
+  left: 1000px;
+  border: solid 1px red;
 }
 main section .obstaculo1 img {
   max-height: 100%;
@@ -91,8 +130,8 @@ footer {
   0% {
     bottom: 45px;
   }
-  40%, 50% {
-    bottom: 145px;
+  50% {
+    bottom: 160px;
   }
 }
 @keyframes escenario {
@@ -105,10 +144,10 @@ footer {
 }
 @keyframes obstaculo1 {
   0% {
-    right: -10%;
+    left: 1050px;
   }
   100% {
-    right: 110%;
+    left: -50px;
   }
 }
 
